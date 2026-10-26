@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Camada de aplicação: casos de uso (serviços) e DTOs. Conversa com o domínio e define as portas para a infraestrutura. -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(VersaoPacotesDotNet)" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AtendimentoOn.Domain\AtendimentoOn.Domain.csproj" />
+  </ItemGroup>
+</Project>

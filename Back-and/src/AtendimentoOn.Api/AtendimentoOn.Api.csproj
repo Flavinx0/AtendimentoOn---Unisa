@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <!-- Camada de apresentação: controllers REST, Swagger, tratamento de erros e configuração da aplicação. -->
+  <PropertyGroup>
+    <UserSecretsId>atendimento-on-api</UserSecretsId>
+    <!-- Os comentários /// dos controllers aparecem no Swagger. -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.*" />
+    <!-- Necessário para os comandos "dotnet ef" (migrations), usados na etapa do banco de dados. -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="$(VersaoPacotesDotNet)">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AtendimentoOn.Application\AtendimentoOn.Application.csproj" />
+    <ProjectReference Include="..\AtendimentoOn.Infrastructure\AtendimentoOn.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

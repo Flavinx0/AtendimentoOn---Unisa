@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Camada de infraestrutura: banco (EF Core + SQL Server), JWT, hash de senha e cliente do Gemini. -->
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="$(VersaoPacotesDotNet)" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="$(VersaoPacotesDotNet)" />
+    <!-- Força a versão corrigida, que o driver do SQL Server traz desatualizada -->
+    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="$(VersaoPacotesDotNet)" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AtendimentoOn.Application\AtendimentoOn.Application.csproj" />
+  </ItemGroup>
+</Project>

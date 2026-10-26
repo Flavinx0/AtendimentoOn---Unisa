@@ -1,0 +1,10 @@
+<Project>
+  <!-- Configurações comuns a todos os projetos da solução. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Versão dos pacotes da Microsoft (EF Core, JwtBearer etc.). Acompanha o TargetFramework. -->
+    <VersaoPacotesDotNet>10.0.*</VersaoPacotesDotNet>
+  </PropertyGroup>
+</Project>
